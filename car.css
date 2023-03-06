@@ -1,0 +1,140 @@
+.world{
+     min-height: 216px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    max-width: 60%;
+}
+
+.car{
+    max-width: 300px;
+    z-index: 2;
+}
+
+.car img{
+    width: 100%;
+    animation: car 1s linear infinite;
+}
+
+@keyframes car{
+    100%{
+        transform: translateY(-1px);
+    }
+    50%{
+        transform: translateY(1px);
+    }
+    0%{
+        transform: translateY(-1px);
+    }
+}
+
+
+
+.skills {
+    min-width: 50%;
+    padding: 0 20px;
+}
+
+.skill-name {
+    font-size: 18px;
+    font-weight: 600;
+    color: #FF4500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 20px 0;
+}
+
+.skill-bar {
+    height: 14px;
+    background: black;
+    border-radius: 3px;
+}
+
+.skill-per {
+    height: 14px;
+    background: #FF4500;
+    border-radius: 3px;
+    position: relative;
+    animation: fillBars 2.5s 1;
+}
+
+.skill-per::before {
+    content: attr(per);
+    position: absolute;
+    padding: 4px 6px;
+    background: #f1f1f1;
+    border-radius: 4px;
+    font-size: 12px;
+    top: -35px;
+    right: 0;
+    transform: translateX(50%);
+}
+
+@keyframes fillBars {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+.ramka{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 30px auto;
+    max-width: 350px;
+    font-size: 24px;
+    font-family: 'Anton', sans-serif;
+    box-shadow: inset 0 0 0 2px black; 
+}
+.ramka::before,
+.ramka::after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: '';
+    z-index: -1;
+    margin: -5%;
+    box-shadow: inset 0 0 0 6px #FF4500;
+    animation: anim-ramka-3 8s linear infinite;
+}
+.ramka::before {
+    animation-delay: -4s;
+}
+.ramka:hover::after,
+.ramka:hover::before {
+    background-color: #FF4500;
+}
+@keyframes anim-ramka-3 {
+    0%, 100% {
+        clip: rect(0px, 400px, 6px, 0px);
+    }
+    25% {
+        clip: rect(0px, 6px, 400px, 0px);
+    }
+    50% {
+        clip: rect(400px, 400px, 400px, 0px);
+    }
+    75% {
+        clip: rect(0px, 400px, 400px, 400px);
+    }
+}
+
+@media (max-width: 1090px){
+    .world{
+        align-items: center;
+    }
+}
+
+@media (max-width: 680px) {
+   .skills{
+    width: 86%;
+}
+}
+

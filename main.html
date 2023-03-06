@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="48x48" href="./img/icons8-галочка-48.png">
+    <title>Michail Balinsky | WEB-DEVELOPER | CV</title>
+    <link rel="stylesheet" href="car.css">
+    <link rel="stylesheet" href="btn_up-down.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+   <div class="container">
+     <header>
+          <div class="logo">
+             <img class="logo__img" src="./img/signature.gif" alt="mySignature">
+          </div>
+         <nav>
+            <ul class="navigation" id="b">
+               <li class="navigation__item"><a href="#title" class="navigation__link">Title</a></li>
+               <li class="navigation__item"><a href="#aboutme" class="navigation__link">About me</a></li>
+               <li class="navigation__item"><a href="#myskills" class="navigation__link">My skills</a></li>
+               <li class="navigation__item"><a href="#exampleOfMyCode" class="navigation__link">Example of my code</a></li>
+               <li class="navigation__item"><a href="#myprojects" class="navigation__link">My projects</a></li>
+            </ul>
+            <div class="popup"><div class="popup__menu"></div></div>
+         </nav>
+         <div class="header__burger">
+            <span class="burger__line"></span>
+            <span class="burger__line"></span>
+            <span class="burger__line"></span>
+            <span class="burger__line"></span>
+        </div>
+     </header>
+     <main>
+       <section class="title" id="title">
+        <h1 class="title__text">Hello everyone!My name is Michael.</h1>
+        <div class="connection">
+            <div class="connection__title">
+                <p class="connection__content">This is a connection with me! You can write in a <a  href="https://t.me/mmmmaikl" target="_blank" class="connection__text-orange">telegram</a> or <a href="./email_item/email.html" target="_blank" class="connection__text-orange">email</a>.</p>
+            </div>
+            <div class="social">
+                <div><a href="https://t.me/mmmmaikl" target="_blank"><img class="telegram__icon" src="./img/telegram-icon.png" alt="myTelegram"></a></div>
+                <div class="social__arrow">
+                    <p class="social__text telegram"><img src="./svg/left-arrow.svg" class="social__svgIcon">teleport to telegram</p>
+                    <p class="social__text email">teleport to email<img src="./svg/right-arrow.svg" class="social__svgIcon"></p>
+                </div>
+                <div><a href="./email_item/email.html" target="_blank"><img class="telegram__icon" src="./img/email.png" alt="myTelegram"></a>
+              </div>  
+            </div>
+         </div>
+         <a href="#aboutme" class="btn-flip" data-back="Go!" data-front="content"></a>
+       </section>
+       <section class="aboutme" id="aboutme">
+         <h2 class="aboutme__title funny-title section-title">My autobiography</h2>
+         <div class="aboutme__content">
+            <div class="aboutme__photoes">
+                <img src="./img/myphoto.JPG" class="aboutme__photo gradient"alt="my-photo">
+                <img src="./img/myphoto1.jpg" class="aboutme__photo gradient"alt="my-photo">
+                <img src="./img/myphoto2.JPG" class="aboutme__photo gradient"alt="my-photo">
+            </div>
+            <div class="aboutme__text-content">
+                <p class="aboutme__text">A few months ago I got the idea, why not become a cool dude. At the moment I'm a front-end developer. I'm also studying to be an English teacher. I think my English level is B1. I live in the capital of Belarus. My way is similar with samurai way - it perpetual.</p>
+                       <!-- машинка -->
+                <div class="world"> 
+                    <div class="car">
+                        <img src="./img_aboutme/car1.png" alt="car">
+                    </div>
+                </div>
+                            <!-- машинка -->
+            </div>
+         </div>
+        </section>
+         <section class="myskills" id="myskills">
+            <h2 class="myskills__title funny-title section-title">My skills</h2>
+            <div class="myskills__content">
+                <div class="skills">
+                    <div class="skill">
+                        <div class="skill-name">
+                            HTML
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-per" per="90%" style="max-width: 90%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-name">
+                            CSS
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-per" per="90%" style="max-width: 90%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-name">
+                            Figma
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-per" per="100%" style="max-width: 100%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-name">
+                            Git/GitHub
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-per" per="100%" style="max-width: 100%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-name">
+                            JavaScript
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-per" per="80%" style="max-width: 80%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-name">
+                            WebPack
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-per" per="70%" style="max-width: 70%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-name">
+                            PHP
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-per" per="20%" style="max-width: 20%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-name">
+                            Python
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-per" per="20%" style="max-width: 20%;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="myskills__icons">
+                    <div class="myskills__icon"><img src="./skills__icons/html.png"></div>
+                    <div class="myskills__icon"><img src="./skills__icons/css.png"></div>
+                    <div class="myskills__icon"><img src="./skills__icons/figma.png"></div>
+                    <div class="myskills__icon"><img src="./skills__icons/git.png"></div>
+                    <div class="myskills__icon"><img src="./skills__icons/github.png"></div>
+                    <div class="myskills__icon"><img src="./skills__icons/webpack.png"></div>
+                    <div class="myskills__icon"><img src="./skills__icons/js.png"></div>
+                    <div class="myskills__icon"><img src="./skills__icons/php.png"></div>
+                    <div class="myskills__icon"><img class="myskills__icon-img" src="./skills__icons/python.png"></div>
+                    <div class="myskills__icon"><img class="myskills__icon-img" src="./skills__icons/windows.png"></div>
+                </div>
+            </div>
+         </section>
+         <section class="exampleOfMyCode" id="exampleOfMyCode">
+            <h2 class="exampleOfMyCode__title funny-title section-title">Example of my code</h2>
+            <p class="exampleOfMyCode__subtitle">For example, I will show you a script which generates random quotes on button click</p>
+            <div class="exampleOfMyCode__container">
+                <div class="exampleOfMyCode__code">
+                    <img class="exampleOfMyCode__codeImg" src="./img/code.jpg">
+                </div>
+            </div>
+         </section>
+         <section class="myprojects" id="myprojects">
+            <h2 class="myprojects__title funny-title section-title">My projects</h2>
+            <div class="myprojects__content">
+               <div class="momentum">
+                <p class="momentum__text">The popular Chrome extension is taken as an example of this application, in terms of functionality, my version is no worse than the original.</p>
+                <a href="https://rolling-scopes-school.github.io/mbalinsky-JSFEPRESCHOOL2022Q4/momentum/" target="_blank" class="momentum__link ramka"><img class="momentum__img" src="./img/momentum.jpg"></a>
+               </div>
+               <div class="plants">
+                <p class="plants__text">This is a landing page of a web-site that provides services for growing a plants.</p>
+                <a class="plants__link ramka" href="https://rolling-scopes-school.github.io/mbalinsky-JSFEPRESCHOOL2022Q4/Plants/" target="_blank"><img class="plants__img" src="./img/plants.jpg"></a>
+               </div>
+            </div>
+               <div class="myprojects__certificate"><a class="myprojects__certificate-links ramka" href="https://app.rs.school/certificate/waryk1ai">Here you can see my certificate!</a></div>
+         </section>
+     </main>
+     <footer>
+        <div class="footer__icons">
+            <a href="https://www.instagram.com/mmmaikl_/"><img src="./footer-icons/instagram.svg" class="footer__instagram"></a>
+            <a href="https://t.me/mmmmaikl"><img src="./footer-icons/telegram.svg" class="footer__telegram"></a>        
+        </div>
+        <marquee direction="left" class="footer__line">created by Michail Balinsky</marquee>
+        <p class="footer__year">©2023</p> 
+     </footer>
+    </div>
+    <div class="wrap">
+        <button class="button">up!</button>
+    </div>
+<script src="main.js"></script>
+</body>
+</html>

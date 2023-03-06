@@ -1,0 +1,111 @@
+body{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/auto.jpg');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color:cornsilk;
+    font-family: Yanone Kaffeesatz, sans-serif; 
+    letter-spacing: 2px;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 90vh;
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
+    margin-top: 30px;
+}
+
+.name__input{
+    font-family: Yanone Kaffeesatz, sans-serif;
+    width: 80%;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+::placeholder{
+    font-family: Yanone Kaffeesatz, sans-serif;
+    font-size: 20px;
+}
+
+.email__input{
+    font-family: Yanone Kaffeesatz, sans-serif;
+    width: 80%;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.area__input{
+    font-family: Yanone Kaffeesatz, sans-serif;
+    width: 290px;
+    height: 200px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+    letter-spacing: 2px;
+    resize: none;
+    margin-bottom: 15px;
+}   
+
+.footer{
+   backdrop-filter: sepia(90%);
+   text-align: center;
+   color: cornsilk;
+   font-weight: 600;
+}
+
+.footer__surname{
+    color: tomato;
+    font-weight: 700;
+}
+
+.button input{
+   padding: 11px 23px;
+   border-radius: 15px;
+   font-size: 15px;
+   font-weight: 600;
+   background-color: rgba(0, 0, 0, 0.6);
+   color: cornsilk;
+   outline: none;
+   border-color: cornsilk;
+   cursor: pointer;
+   transition: .3s ease-in-out;
+}
+
+.button input:hover{
+    background-color: cornsilk;
+    opacity: 0.8;
+    color: rgba(0, 0, 0, 0.9);
+    transition: .3s;
+    border-color: rgba(0, 0, 0, 0.7);
+}
+
+.button{
+    text-align: center;
+}

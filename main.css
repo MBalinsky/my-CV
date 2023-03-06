@@ -1,0 +1,792 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Inika&family=Inter:wght@400;700&family=Nunito+Sans:ital,wght@0,400;0,600;1,400&family=Open+Sans:wght@300&family=Yanone+Kaffeesatz&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Inika&family=Inter:wght@400;700&family=Nunito+Sans:ital,wght@0,400;0,600;1,400&family=Open+Sans:wght@300&family=Yanone+Kaffeesatz&display=swap");
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-image: url("./img/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  background-attachment: fixed;
+  margin: 0;
+}
+
+.container {
+  max-width: 1200px;
+  -webkit-backdrop-filter: blur(7px);
+          backdrop-filter: blur(7px);
+  margin: 30px auto 0 auto;
+}
+
+header {
+  z-index: 5;
+  margin: 0;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .logo__img {
+  width: 167px;
+  height: 100%;
+}
+header nav {
+  width: 100%;
+}
+header .navigation__item {
+  font-family: Anton, sans-serif;
+  list-style: none;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+header .popup {
+  width: 95%;
+}
+header .popup__menu {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+header .navigation {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+}
+header .navigation__link {
+  text-decoration: none;
+  color: #FF4500;
+  background: linear-gradient(#FF4500 0 0) bottom/var(--t, 0) 2px no-repeat;
+  transition: 0.5s;
+}
+header .navigation__link:hover {
+  --t: 100%;
+}
+header .header__burger {
+  display: none;
+}
+header .burger__line {
+  display: none;
+}
+
+.title {
+  height: 80vh;
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+  margin: 0;
+}
+.title .title__text {
+  font-family: monospace;
+  font-size: calc(16px + 2.1014492754vw);
+  white-space: nowrap;
+  overflow: hidden;
+  margin: auto;
+  display: inline-block;
+  border-right: 4px solid #FF4500;
+  width: 34ch;
+  -webkit-animation: showBorder 0.75s step-end infinite, showTitle 8s steps(34);
+          animation: showBorder 0.75s step-end infinite, showTitle 8s steps(34);
+}
+@-webkit-keyframes showBorder {
+  0% {
+    border-color: #FF4500;
+  }
+  50% {
+    border-color: transparent;
+  }
+  100% {
+    border-color: #FF4500;
+  }
+}
+@keyframes showBorder {
+  0% {
+    border-color: #FF4500;
+  }
+  50% {
+    border-color: transparent;
+  }
+  100% {
+    border-color: #FF4500;
+  }
+}
+@-webkit-keyframes showTitle {
+  from {
+    width: 0;
+  }
+}
+@keyframes showTitle {
+  from {
+    width: 0;
+  }
+}
+.title .telegram__icon {
+  width: 45%;
+  transition: 0.5s ease-out;
+}
+.title .telegram__icon:hover {
+  transform: scale(1.1, 1.1);
+}
+.title .connection__content {
+  font-family: Anton, sans-serif;
+  color: black;
+  font-size: 23px;
+  letter-spacing: 2px;
+}
+.title .connection__text-orange {
+  color: #FF4500;
+  text-decoration: none;
+}
+.title .connection__title {
+  padding: 15px 0;
+}
+.title .social {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.title .social__svgIcon {
+  width: 10%;
+  padding: 15px;
+  -webkit-animation: arrowAnimation 1s ease-in-out infinite;
+          animation: arrowAnimation 1s ease-in-out infinite;
+}
+.title .social__arrow {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.title .social__text {
+  font-family: Anton, sans-serif;
+  font-size: calc(17px + 13.6 * (100vw - 320px) / 1380);
+  color: #FF4500;
+  letter-spacing: 2px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.title .telegram {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+.title .email {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+@-webkit-keyframes arrowAnimation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes arrowAnimation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.title .btn-flip {
+  cursor: pointer;
+  opacity: 1;
+  outline: 0;
+  color: #FF4500;
+  line-height: 40px;
+  position: relative;
+  text-align: center;
+  letter-spacing: 1px;
+  display: inline-block;
+  text-decoration: none;
+  font-family: "Anton", sans-serif;
+  text-transform: uppercase;
+}
+.title .btn-flip:hover:after {
+  opacity: 1;
+  transform: translateY(0) rotateX(0);
+}
+.title .btn-flip:hover:before {
+  opacity: 0;
+  transform: translateY(50%) rotateX(90deg);
+}
+.title .btn-flip:after {
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  color: black;
+  display: block;
+  transition: 0.5s;
+  position: absolute;
+  background: #FF4500;
+  content: attr(data-back);
+  transform: translateY(-50%) rotateX(90deg);
+}
+.title .btn-flip:before {
+  top: 0;
+  left: 0;
+  opacity: 1;
+  color: #FF4500;
+  display: block;
+  padding: 0 30px;
+  line-height: 40px;
+  transition: 0.5s;
+  position: relative;
+  background: black;
+  content: attr(data-front);
+  transform: translateY(0) rotateX(0);
+}
+
+.aboutme {
+  font-family: Anton, sans-serif;
+  letter-spacing: 1px;
+}
+.aboutme .aboutme__title {
+  font-size: 40px;
+}
+.aboutme h2.funny-title {
+  border-top: 5px solid black;
+  border-bottom: 5px solid black;
+  font-size: 60px;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  font-family: "Anton", sans-serif;
+  font-weight: 900;
+  letter-spacing: 8px;
+}
+@-webkit-keyframes move-background {
+  0% {
+    background-position: -300px 0;
+  }
+  100% {
+    background-position: 300px -300px;
+  }
+}
+@keyframes move-background {
+  0% {
+    background-position: -300px 0;
+  }
+  100% {
+    background-position: 300px -300px;
+  }
+}
+.aboutme .section-title {
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+  color: transparent;
+  background: url(./png/1636970694_3-gamerwall-pro-p-cherno-oranzhevaya-abstraktsiya-krasivie-o-3.png) repeat white;
+  background-size: cover;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-animation: move-background 20s infinite linear alternate;
+  animation: move-background 20s infinite linear alternate;
+}
+.aboutme .aboutme__photo {
+  max-width: 250px;
+  border: 10px solid transparent;
+  -o-border-image: 10 repeating-linear-gradient(45deg, black, black 10px, transparent 10px, transparent 20px, #FF4500 20px, #FF4500 30px, transparent 30px, transparent 40px);
+     border-image: 10 repeating-linear-gradient(45deg, black, black 10px, transparent 10px, transparent 20px, #FF4500 20px, #FF4500 30px, transparent 30px, transparent 40px);
+}
+.aboutme .aboutme__content {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.aboutme .aboutme__photoes {
+  display: flex;
+  margin-left: 20px;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+}
+.aboutme .aboutme__photo:nth-child(2) {
+  margin-top: -83px;
+  margin-left: 270px;
+}
+.aboutme .aboutme__photo:nth-child(3) {
+  margin-top: -60px;
+}
+.aboutme .aboutme__text-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.aboutme .aboutme__text {
+  font-family: "Anton", sans-serif;
+  font-size: 30px;
+  padding: 0 30px;
+}
+
+.myskills {
+  font-family: "Anton", sans-serif;
+  width: 100%;
+}
+.myskills h2.funny-title {
+  border-top: 5px solid black;
+  border-bottom: 5px solid black;
+  font-size: 60px;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  font-family: "Anton", sans-serif;
+  font-weight: 900;
+  letter-spacing: 8px;
+}
+@-webkit-keyframes move-background {
+  0% {
+    background-position: -300px 0;
+  }
+  100% {
+    background-position: 300px -300px;
+  }
+}
+@keyframes move-background {
+  0% {
+    background-position: -300px 0;
+  }
+  100% {
+    background-position: 300px -300px;
+  }
+}
+.myskills .section-title {
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+  color: transparent;
+  background: url(./png/1636970694_3-gamerwall-pro-p-cherno-oranzhevaya-abstraktsiya-krasivie-o-3.png) repeat white;
+  background-size: cover;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-animation: move-background 20s infinite linear alternate;
+  animation: move-background 20s infinite linear alternate;
+}
+.myskills .aboutme__photo {
+  max-width: 250px;
+  border: 10px solid transparent;
+  -o-border-image: 10 repeating-linear-gradient(45deg, black, black 10px, transparent 10px, transparent 20px, #FF4500 20px, #FF4500 30px, transparent 30px, transparent 40px);
+     border-image: 10 repeating-linear-gradient(45deg, black, black 10px, transparent 10px, transparent 20px, #FF4500 20px, #FF4500 30px, transparent 30px, transparent 40px);
+}
+.myskills .myskills__content {
+  display: flex;
+  width: 100%;
+}
+.myskills .myskills__icons {
+  margin-top: 45px;
+  margin-left: 80px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 100px);
+  align-items: center;
+}
+.myskills .myskills__icon {
+  padding-bottom: 25px;
+}
+
+.exampleOfMyCode h2.funny-title {
+  border-top: 5px solid black;
+  border-bottom: 5px solid black;
+  font-size: 60px;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  font-family: "Anton", sans-serif;
+  font-weight: 900;
+  letter-spacing: 8px;
+}
+@-webkit-keyframes move-background {
+  0% {
+    background-position: -300px 0;
+  }
+  100% {
+    background-position: 300px -300px;
+  }
+}
+@keyframes move-background {
+  0% {
+    background-position: -300px 0;
+  }
+  100% {
+    background-position: 300px -300px;
+  }
+}
+.exampleOfMyCode .section-title {
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+  color: transparent;
+  background: url(./png/1636970694_3-gamerwall-pro-p-cherno-oranzhevaya-abstraktsiya-krasivie-o-3.png) repeat white;
+  background-size: cover;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-animation: move-background 20s infinite linear alternate;
+  animation: move-background 20s infinite linear alternate;
+}
+.exampleOfMyCode .aboutme__photo {
+  max-width: 250px;
+  border: 10px solid transparent;
+  -o-border-image: 10 repeating-linear-gradient(45deg, black, black 10px, transparent 10px, transparent 20px, #FF4500 20px, #FF4500 30px, transparent 30px, transparent 40px);
+     border-image: 10 repeating-linear-gradient(45deg, black, black 10px, transparent 10px, transparent 20px, #FF4500 20px, #FF4500 30px, transparent 30px, transparent 40px);
+}
+.exampleOfMyCode .exampleOfMyCode__subtitle {
+  font-family: "Anton", sans-serif;
+  letter-spacing: 1px;
+  font-size: 25px;
+  color: #FF4500;
+  text-align: center;
+  padding: 15px;
+}
+.exampleOfMyCode .exampleOfMyCode__codeImg {
+  box-shadow: 0 1px 4px rgb(0, 0, 0), -23px 0 20px -23px rgba(0, 0, 0, 0.8), 23px 0 20px -23px rgba(0, 0, 0, 0.8), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  border-radius: 5px;
+  max-width: 58%;
+}
+.exampleOfMyCode .exampleOfMyCode__code {
+  text-align: center;
+}
+
+.myprojects h2.funny-title {
+  border-top: 5px solid black;
+  border-bottom: 5px solid black;
+  font-size: 60px;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  font-family: "Anton", sans-serif;
+  font-weight: 900;
+  letter-spacing: 8px;
+}
+@-webkit-keyframes move-background {
+  0% {
+    background-position: -300px 0;
+  }
+  100% {
+    background-position: 300px -300px;
+  }
+}
+@keyframes move-background {
+  0% {
+    background-position: -300px 0;
+  }
+  100% {
+    background-position: 300px -300px;
+  }
+}
+.myprojects .section-title {
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+  color: transparent;
+  background: url(./png/1636970694_3-gamerwall-pro-p-cherno-oranzhevaya-abstraktsiya-krasivie-o-3.png) repeat white;
+  background-size: cover;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-animation: move-background 20s infinite linear alternate;
+  animation: move-background 20s infinite linear alternate;
+}
+.myprojects .aboutme__photo {
+  max-width: 250px;
+  border: 10px solid transparent;
+  -o-border-image: 10 repeating-linear-gradient(45deg, black, black 10px, transparent 10px, transparent 20px, #FF4500 20px, #FF4500 30px, transparent 30px, transparent 40px);
+     border-image: 10 repeating-linear-gradient(45deg, black, black 10px, transparent 10px, transparent 20px, #FF4500 20px, #FF4500 30px, transparent 30px, transparent 40px);
+}
+.myprojects .myprojects__content {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 10px 20px 0 20px;
+}
+.myprojects .momentum {
+  width: 50%;
+}
+.myprojects .plants {
+  width: 50%;
+}
+.myprojects .momentum__text {
+  font-family: "Anton", sans-serif;
+  letter-spacing: 1px;
+  color: #FF4500;
+  width: 96%;
+}
+.myprojects .plants__text {
+  font-family: "Anton", sans-serif;
+  letter-spacing: 1px;
+  color: #FF4500;
+  width: 96%;
+}
+.myprojects .plants__img {
+  max-width: 360px;
+  text-align: center;
+}
+.myprojects .momentum__img {
+  max-width: 360px;
+  text-align: center;
+}
+.myprojects .myprojects__certificate {
+  max-width: 360px;
+  margin: 20px auto 0 auto;
+}
+.myprojects .myprojects__certificate-links {
+  text-decoration: none;
+  max-width: 360px;
+  font-family: Anton, sans-serif;
+  color: white;
+  padding: 15px 10px;
+}
+
+footer {
+  background-color: black;
+  padding: 25px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .footer__icons {
+  width: 35%;
+  display: flex;
+  justify-content: space-around;
+}
+footer .footer__instagram {
+  width: 40px;
+  cursor: pointer;
+}
+footer .footer__telegram {
+  margin-left: 5px;
+  width: 154px;
+  cursor: pointer;
+}
+footer .footer__line {
+  color: #FF4500;
+  font-family: Anton, sans-serif;
+  letter-spacing: 1px;
+  width: 35%;
+}
+footer .footer__year {
+  font-family: Anton, sans-serif;
+  width: 35%;
+  letter-spacing: 1px;
+  color: #FF4500;
+  text-align: center;
+}
+
+@media (max-width: 1090px) {
+  .aboutme .aboutme__photoes {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .aboutme .aboutme__photo {
+    width: calc(100px + 150 * (100vw - 320px) / 1060);
+  }
+  .aboutme .aboutme__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .aboutme .aboutme__photo:nth-child(2) {
+    margin-top: 0;
+    margin-left: 94px;
+  }
+  .aboutme .aboutme__photo:nth-child(3) {
+    margin-top: 0;
+  }
+}
+@media (max-width: 850px) {
+  .myskills .myskills__content {
+    display: flex;
+    flex-direction: column;
+  }
+  .myskills .myskills__icons {
+    text-align: center;
+    margin-top: 50px;
+    margin-left: 0;
+  }
+}
+@media (max-width: 700px) {
+  .aboutme h2.funny-title {
+    font-size: 47px;
+  }
+}
+@media (max-width: 850px) {
+  .myprojects .myprojects__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .myprojects .momentum {
+    width: 100%;
+  }
+  .myprojects .plants {
+    width: 100%;
+  }
+}
+@media (max-width: 365px) {
+  .myprojects .myprojects__certificate-links {
+    max-width: 220px;
+    text-align: center;
+  }
+  .myprojects .momentum__img {
+    max-width: 290px;
+  }
+  .myprojects .plants__img {
+    max-width: 290px;
+  }
+  .myprojects .momentum__text {
+    font-size: 12px;
+  }
+  .myprojects .plants__text {
+    font-size: 12px;
+  }
+}
+@media (max-width: 750px) {
+  footer .footer__icons {
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-around;
+  }
+  footer .footer__telegram {
+    margin-top: 5px;
+  }
+}
+@media (max-width: 450px) {
+  footer .footer__instagram {
+    width: 25px;
+  }
+  footer .footer__telegram {
+    width: 63px;
+  }
+}
+@media (max-width: 810px) {
+  .container {
+    margin: 0px auto 0px auto;
+  }
+  body.noscroll {
+    overflow: hidden;
+  }
+  header .navigation {
+    display: none;
+  }
+  header .navigation.active {
+    display: flex;
+    width: 100%;
+    height: 60%;
+    font-size: 35px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    margin-top: 3px;
+    padding-left: 0;
+  }
+  header .header__burger {
+    display: block;
+    margin-right: 15px;
+    padding: 15px 10px 15px 10px;
+    cursor: pointer;
+    position: relative;
+  }
+  header .burger__line {
+    display: block;
+    width: 40px;
+    border-radius: 2px;
+    margin-bottom: 5px;
+    height: 3px;
+    background-color: white;
+    transition: 0.3s;
+  }
+  header .burger__line.active:nth-child(1) {
+    position: absolute;
+    transform: rotate(47deg);
+    top: 22px;
+    transition: 0.3s ease-in-out;
+  }
+  header .burger__line.active:nth-child(2) {
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+  }
+  header .burger__line.active:nth-child(3) {
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+  }
+  header .burger__line.active:nth-child(4) {
+    position: absolute;
+    transform: rotate(-45deg);
+    top: 22px;
+    transition: 0.3s ease-in-out;
+  }
+  .popup {
+    left: -100%;
+    transition: 0.3s ease-out;
+  }
+  .popup.active {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    height: 100vh;
+    top: 89px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .popup__menu.active {
+    transition: 0.3s ease-out;
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    height: 60vh;
+    top: 0px;
+    left: 0px;
+    background-color: rgb(0, 0, 0);
+  }
+  .popup__menu.active .navigation__item {
+    font-size: 35px;
+    text-align: center;
+    list-style: none;
+    margin-bottom: 12px;
+  }
+  .popup__menu.active .navigation__link {
+    text-decoration: none;
+    color: #FF4500;
+  }
+  .popup__menu.active .navigation.active {
+    margin: 0 auto 0 auto;
+    padding-left: 0;
+  }
+}
+@media (max-width: 768px) {
+  .title .title__text {
+    font-size: calc(16px + 49.3 * (100vw - 320px) / 1380);
+  }
+}
+@media (min-width: 2200px) {
+  .title .title__text {
+    font-size: 60px;
+  }
+}/*# sourceMappingURL=main.css.map */
