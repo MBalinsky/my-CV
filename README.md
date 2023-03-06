@@ -1,1 +1,1 @@
-https://mbalinsky.github.io/my-CV/
+https://mbalinsky.github.io/my-CV/main.html
