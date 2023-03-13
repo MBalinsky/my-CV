@@ -1,1 +1,3 @@
-https://mbalinsky.github.io/my-CV/main.html
+http://mbalinsky.zzz.com.ua/main.html
+---------------
+it's a hosting on my CV
