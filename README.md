@@ -1,3 +1,1 @@
-http://mbalinsky.zzz.com.ua/main.html
----------------
-it's a hosting on my CV
+soon here will be a hosting on my CV
